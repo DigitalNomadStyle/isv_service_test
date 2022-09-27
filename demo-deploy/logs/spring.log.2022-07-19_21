@@ -1,0 +1,118 @@
+2022-07-19 21:35:14.178 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 21:35:51.545 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 75363 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 21:35:51.546 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 21:35:52.531 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 21:35:52.548 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 21:35:52.549 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 21:35:52.557 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 21:35:52.625 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 21:35:52.625 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1047 ms
+2022-07-19 21:35:52.645 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 21:35:52.648 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 21:35:52.648 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 21:35:52.648 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 21:35:52.648 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 21:35:52.941 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'printService': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+2022-07-19 21:35:52.942 [main] INFO  org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-07-19 21:35:52.950 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-19 21:35:52.951 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement; but it does not exist. Its class, com.google.gson.JsonParser, is available from the following locations:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/com/google/gson/JsonParser.class
+
+It was loaded from the following location:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.google.gson.JsonParser
+
+2022-07-19 21:39:42.428 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 75567 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 21:39:42.429 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 21:39:43.362 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 21:39:43.381 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 21:39:43.381 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 21:39:43.392 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 21:39:43.469 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 21:39:43.469 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1007 ms
+2022-07-19 21:39:43.492 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 21:39:43.495 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 21:39:43.496 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 21:39:43.496 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 21:39:43.496 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 21:39:43.819 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'printService': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+2022-07-19 21:39:43.821 [main] INFO  org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-07-19 21:39:43.830 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-19 21:39:43.831 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement; but it does not exist. Its class, com.google.gson.JsonParser, is available from the following locations:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/com/google/gson/JsonParser.class
+
+It was loaded from the following location:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.google.gson.JsonParser
+
+2022-07-19 21:40:01.917 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 75625 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 21:40:01.919 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 21:40:03.204 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 21:40:03.237 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 21:40:03.237 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 21:40:03.254 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 21:40:03.347 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 21:40:03.347 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1397 ms
+2022-07-19 21:40:03.370 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 21:40:03.373 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 21:40:03.373 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 21:40:03.374 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 21:40:03.374 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 21:40:03.680 [main] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'printService': Invocation of init method failed; nested exception is java.lang.NoSuchMethodError: com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+2022-07-19 21:40:03.681 [main] INFO  org.apache.catalina.core.StandardService  - Stopping service [Tomcat]
+2022-07-19 21:40:03.689 [main] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-19 21:40:03.690 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter  - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call the method com.google.gson.JsonParser.parseString(Ljava/lang/String;)Lcom/google/gson/JsonElement; but it does not exist. Its class, com.google.gson.JsonParser, is available from the following locations:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/com/google/gson/JsonParser.class
+
+It was loaded from the following location:
+
+    jar:file:/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar!/BOOT-INF/lib/gson-2.8.5.jar!/
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.google.gson.JsonParser
+

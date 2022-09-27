@@ -1,0 +1,285 @@
+2022-07-19 20:34:45.255 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 72557 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 20:34:45.257 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 20:34:46.219 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 20:34:46.235 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 20:34:46.236 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 20:34:46.246 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 20:34:46.321 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 20:34:46.321 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1025 ms
+2022-07-19 20:34:46.344 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 20:34:46.348 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 20:34:46.348 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 20:34:46.348 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 20:34:46.349 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 20:34:47.153 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - responseEntity === {"body":"<html>\r\n<head><title>302 Found</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>302 Found</h1></center>\r\n<hr><center>bfe/1.0.8.18</center>\r\n</body>\r\n</html>\r\n","headers":{"Content-Length":["161"],"Date":["Tue, 19 Jul 2022 12:34:47 GMT"],"Connection":["keep-alive"],"Location":["http://www.baidu.com/"],"Server":["bfe/1.0.8.18"],"Content-Type":["text/html"]},"statusCode":"FOUND","statusCodeValue":302}
+2022-07-19 20:34:47.156 [main] ERROR demo.biz.PrintService  - Failed to getToken!
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.jinritemai.cloud.base.core.service.TokenServiceImpl.getToken(TokenServiceImpl.java:44)
+	at demo.biz.PrintService.testTokenService(PrintService.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at demo.deploy.DemoApplication.main(DemoApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+2022-07-19 20:34:47.160 [main] INFO  com.jinritemai.cloud.base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-19 20:34:47.287 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:34:47.496 [main] INFO  com.jinritemai.cloud.base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-19 20:34:47.517 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-19 20:34:47.520 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.523 seconds (JVM running for 2.948)
+2022-07-19 20:35:47.038 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:49:43.915 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 73344 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 20:49:43.917 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 20:49:44.941 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 20:49:44.961 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 20:49:44.961 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 20:49:44.971 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 20:49:45.049 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 20:49:45.049 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1096 ms
+2022-07-19 20:49:45.069 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 20:49:45.073 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 20:49:45.073 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 20:49:45.073 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 20:49:45.073 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 20:49:45.842 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - responseEntity === {"body":"{\"code\":40003,\"err_no\":30001,\"log_id\":\"202207192049450101350531041E048143\",\"message\":\"认证失败，app_key不存在\",\"msg\":\"缺少必选参数\",\"sub_code\":\"isv.app-id-missing\",\"sub_msg\":\"认证失败，app_key不存在\"}","headers":{"X-Agw-Info":["0KdGBNzwfqPv168CuRnuAnT4Y84Zfgo_u-mVlL2l-z4YCGXe48Mn_KHKq5eXl2xWEBlDb6DFzXwSM8dSglVbXYHDE131_Ap_U7GUZwZML9PQHWdcXwxG6xv8JqdFdYqGmv1qBmF-lFhMi7mPO1KMCUDwT5Kt"],"Date":["Tue, 19 Jul 2022 12:49:45 GMT"],"X-Dsa-Origin-Status":["200"],"X-TRANS-LEVEL":["0"],"Content-Length":["222"],"Server-Timing":["inner; dur=39, cdn-cache;desc=MISS, origin;dur=79, edge;dur=0"],"x-request-ip":["218.75.70.10"],"x-tt-trace-host":["0188ea38c155a9c0d1749dce0d4f8ed8e3c94df44b40fc9fc84647b87c468fdfc6bd6980e3329f8ffe8cab5db20b0c679c4be51732e8f8f1b802a41a7c448e30fe9f3c3857fbf2099cb165161931fd58e61b674280729d586ddc644a5b48f3f5d2"],"Content-Type":["application/json; charset=utf-8"],"x-tt-trace-tag":["id=5"],"x-dsa-trace-id":["16582349857e5e7bc243baa866ba78291611a90cd6"],"Connection":["keep-alive"],"via":["n173-120-047.zjjxct02"],"Server":["dsa-nginx"],"X-Tt-Logid":["202207192049450101350531041E048143"],"Vary":["Accept-Encoding"]},"statusCode":"OK","statusCodeValue":200}
+2022-07-19 20:49:45.845 [main] ERROR demo.biz.PrintService  - Failed to getToken!
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.jinritemai.cloud.base.core.service.TokenServiceImpl.getToken(TokenServiceImpl.java:45)
+	at demo.biz.PrintService.testTokenService(PrintService.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at demo.deploy.DemoApplication.main(DemoApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+2022-07-19 20:49:45.849 [main] INFO  com.jinritemai.cloud.base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-19 20:49:46.002 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:49:46.228 [main] INFO  com.jinritemai.cloud.base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-19 20:49:46.253 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-19 20:49:46.257 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.585 seconds (JVM running for 3.013)
+2022-07-19 20:49:56.673 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:53:19.168 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 73787 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 20:53:19.170 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 20:53:20.195 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 20:53:20.214 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 20:53:20.214 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 20:53:20.225 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 20:53:20.301 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 20:53:20.302 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1101 ms
+2022-07-19 20:53:20.327 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 20:53:20.330 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 20:53:20.331 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 20:53:20.331 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 20:53:20.331 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 20:53:21.223 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - responseEntity === {"body":"<!doctype html><head><script>window.AVAILABLE_CDN_DOMAIN='//sf3-ecomcdn-tos.pstatp.com'</script> <script>window.AVAILABLE_GOOFY_CDN_DOMAIN='//lf3-ecomfe.bytetos.com'</script><meta charset=\"utf-8\"/><title>抖店开放平台</title><meta name=\"keywords\" content=\"抖店,服务市场,抖店服务市场,抖音电商,抖店电商服务市场,电商服务市场\"/><meta name=\"description\" content=\"抖店服务市场，基于抖店数据与接口，赋能内容电商生态，服务商家与开发者\"/><link rel=\"icon\" href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAYAAACkVDyJAAAABmJLR0QA/wD/AP+gvaeTAAAC00lEQVRIibWWzUtUURTAf+c6aqlhEEGZJNKIhR9Fi4qWQUWQmpa7/oC20TbCQApqE22KFhLRIhJyCNpYUK2CVqbSN5lGRpEaEmo2806Lmd6c+5w3atBd3Xu+fufce+59T/jfo0trySAABMzLf4V16gbgu5FcT8Qad+h+HO0IjQRURbSjpOT0skChFfUkb5cC27UGRx/CYQAUiO6DML4sLOvbEvGLALu0DuUpULdMqNEVAaE5CnThokcdyp0VwCBgZIVAW+EvWhjLVzhEJ8I+Y6AIfQRc4zcfvDAVzIbzDr2BI5nzmCfFURAFFfwKX9Ej6TxQOOEFVXoZkHNF8+9RxxBNKOU5yXgWBhyn3ms2ze6KM+57zHyWUi4WhQEMsRVCGAjvDSB6fiMA2Qq7tYo09cb4Gf0yn9NVs0ircfxESj7m7JJeBwce0O9QLDBDM7b5xTRFhh0IJ02g20AW6Eh690wiQJtMhuGsS5Fscllv8TQJPpugSU9nm0u8mNPcl8l4oDNAMUBBWceksbTAKR7IDABHtBxoKFSAK5BNBsdrU4WtcIqbsgBAt64Faowuv51r2A6UmkQjQGgyju/ChjmklcD6UBOY7UyzDdvlWrRhwpfJ0aWbgY1Gmd/Oysj5uSLnZyt0EWDGVhjEZ4N6WwZizi8KdLEVKsLLvJkUvqC5uV9h2lToPGBANWNmbWNOkJIffxcJhBbvLqW9h/kFykS4KueryfsewmAOt2CaqZo0tSaG99AnCGj2LugCX8L5gMR/hlIyWFCe4QBxjwjZLW3wHCq8jl3daNMKlLOeLOC5XSaAMs9AuMUxPUUpw8xFfhDihqOEMnYRcAHYbTQzlPLIBwrDKHuNrBHhMeklqRQfQUFpL/3y088Nrq4i7GrGXXZyJSrMHm6nXgbOsPR36V/GIsIlpjnPE0kXBgK0aRMlHETYhBL/+xg/5gh4QwkPGZBvcUZ/AKmM2s2dkhnwAAAAAElFTkSuQmCC\" type=\"image/x-icon\"/><link rel=\"dns-prefetch\" href=\"//fxg.jinritemai.com\"/><link rel=\"dns-prefetch\" href=\"//open-miniprogram.bytedance.com\"/><link rel=\"dns-prefetch\" href=\"//i.snssdk.com\"/><link rel=\"dns-prefetch\" href=\"//lf1-static.bytednsdoc.com\"/><link rel=\"dns-prefetch\" href=\"//lf3-static.bytednsdoc.com\"/><link rel=\"dns-prefetch\" href=\"//lf6-static.bytednsdoc.com\"/><link rel=\"dns-prefetch\" href=\"//lf3-cdn-tos.bytescm.com\"/><link rel=\"dns-prefetch\" href=\"//i.snssdk.com\"/><link rel=\"dns-prefetch\" href=\"//mcs.snssdk.com\"/><link rel=\"dns-prefetch\" href=\"//xxbg.snssdk.com\"/><meta name=\"screen-orientation\" content=\"portrait\"/><meta name=\"x5-orientation\" content=\"portrait\"/><meta name=\"format-detection\" content=\"telephone=no\"/><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"/><script>window.gfdatav1={env: 'boe', ver: '1.0.0.3994' , canary: 0, idc: 'boe', region: 'BOE' };</script><script src=\"https://lf3-cdn-tos.bytescm.com/obj/rc-web-sdk/acrawler.js?__inline\"></script><link href=\"https://cdn-tos-cn.bytedance.net/obj/archi/ecom/fe/open/developer/resource/index.95ce04a7.css\" rel=\"stylesheet\"></head><body><div id=\"root\"></div><script type=\"text/javascript\" src=\"https://cdn-tos-cn.bytedance.net/obj/archi/ecom/fe/open/developer/resource/index.41f9f0fa.js\" crossorigin=\"anonymous\"></script></body>","headers":{"Server-Timing":["inner; dur=30, tt_agw; dur=15"],"Server":["nginx"],"Content-Length":["2924"],"Accept-Ranges":["bytes"],"Cache-Control":["no-store"],"X-Goofy-Deploy-Version":["1.0.0.3994"],"X-Tt-Logid":["2022071920532101017425118404126D44"],"Set-Cookie":["gfsitesid=MzAxODA2MDA1MHwxNjU4MjM1MjAxMjh8fDAGBgYGBgY; Path=/; Domain=openfxg-boe.bytedance.net; Max-Age=7776000","gftoken=MzAxODA2MDA1MHwxNjU4MjM1MjAxMjh8fDAGBgYGBgY; Path=/; Domain=openfxg-boe.bytedance.net; Max-Age=7776000"],"Last-Modified":["Tue, 19 Jul 2022 09:30:28 GMT"],"X-Agw-Info":["6sEwiXbDY_3XPkGdnk-B3wFnt1pS9BCWbgRI9DP2y4ocg3Be0D1yB5mftmnncsUAr_2Kyvhr12Vp_lZZtNuKhqxN9UVnLigU8TUDl7Z58INOSiusKXWRwdtaqoG46SEygxU7lms3FboQZlbKYH9IxVH2CePhdgFcvF5GTQ=="],"x-tt-trace-tag":["id=00;cdn-cache=miss"],"Connection":["keep-alive"],"X-Server":["Goofy"],"X-TRANS-LEVEL":["10"],"Date":["Tue, 19 Jul 2022 12:53:21 GMT"],"x-tt-trace-host":["01bf29487831cc0ad5a573b707d85ace4609197bbde12d39cd4e4003258c02e8b0dec10daa2dab9ebd7cd91d2b19aad06d2b8cc7aba2522fbaae7220204a297c1fbfd5a55a1e1cc2e64cd5e86e50104724d4b6e71e8b1f51482938a625ebeba807"],"Vary":["Accept-Encoding"],"Content-Security-Policy-Report-Only":["default-src 'self' blob: data: 'unsafe-inline' 'unsafe-eval' *.pstatp.com *.snssdk.com *.bytedance.net *.jinritemai.com *.byted.org *.bytetos.com *.ecombdstatic.com *.bytescm.com *.volcengine.com *.volces.com *.bytegoofy.com;"],"Content-Type":["text/html; charset=utf-8"]},"statusCode":"OK","statusCodeValue":200}
+2022-07-19 20:53:21.225 [main] ERROR demo.biz.PrintService  - Failed to getToken!
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.jinritemai.cloud.base.core.service.TokenServiceImpl.getToken(TokenServiceImpl.java:45)
+	at demo.biz.PrintService.testTokenService(PrintService.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at demo.deploy.DemoApplication.main(DemoApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+2022-07-19 20:53:21.230 [main] INFO  com.jinritemai.cloud.base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-19 20:53:21.375 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:53:21.586 [main] INFO  com.jinritemai.cloud.base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-19 20:53:21.611 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-19 20:53:21.614 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.692 seconds (JVM running for 3.119)
+2022-07-19 20:55:19.094 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:55:40.249 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 73999 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 20:55:40.250 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 20:55:41.232 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 20:55:41.249 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 20:55:41.249 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 20:55:41.258 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 20:55:41.333 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 20:55:41.334 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1052 ms
+2022-07-19 20:55:41.353 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 20:55:41.356 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 20:55:41.356 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 20:55:41.356 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 20:55:41.356 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 20:55:41.986 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - responseEntity === {"body":"{\"code\":40003,\"err_no\":4,\"log_id\":\"2022071920554101022514606300453BC3\",\"message\":\"【err_no、message字段已废弃，请阅读公告尽快改造：https://zjsms.com/2BwQmcT/】认证失败, 确保app_key, method, param_json, timestamp, v, sign等参数不为空\",\"msg\":\"非法的参数\",\"sub_code\":\"isv.parameter-invalid\",\"sub_msg\":\"认证失败, 确保app_key, method, param_json, timestamp, v, sign等参数不为空\"}","headers":{"x-tt-trace-host":["01bf29487831cc0ad5a573b707d85ace4659c996e5e0e1c9266b1520edad0eea1bed844fc1d1ce300ce386d1399e3db33dff51e28e176cc8f488e022c0f004282e0579064855da8d38ce7a9d1a17e7babf"],"Server":["nginx"],"Content-Type":["application/json; charset=utf-8"],"x-tt-trace-tag":["id=00;cdn-cache=miss"],"Date":["Tue, 19 Jul 2022 12:55:42 GMT"],"Connection":["keep-alive"],"X-Tt-Logid":["2022071920554101022514606300453BC3"],"Vary":["Accept-Encoding"],"Content-Length":["422"],"server-timing":["inner; dur=121"]},"statusCode":"OK","statusCodeValue":200}
+2022-07-19 20:55:41.989 [main] ERROR demo.biz.PrintService  - Failed to getToken!
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.jinritemai.cloud.base.core.service.TokenServiceImpl.getToken(TokenServiceImpl.java:45)
+	at demo.biz.PrintService.testTokenService(PrintService.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at demo.deploy.DemoApplication.main(DemoApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+2022-07-19 20:55:41.993 [main] INFO  com.jinritemai.cloud.base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-19 20:55:42.141 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:55:42.341 [main] INFO  com.jinritemai.cloud.base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-19 20:55:42.359 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-19 20:55:42.361 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.362 seconds (JVM running for 2.783)
+2022-07-19 20:56:45.191 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:57:15.754 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 74126 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-19 20:57:15.757 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-19 20:57:16.898 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-19 20:57:16.917 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-19 20:57:16.917 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-19 20:57:16.928 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-19 20:57:17.025 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-19 20:57:17.025 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1207 ms
+2022-07-19 20:57:17.052 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-19 20:57:17.055 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-19 20:57:17.056 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-19 20:57:17.056 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-19 20:57:17.056 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-19 20:57:17.373 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - requestUrl === http://openapi-boe.byted.org/token/create?app_key=7101873806687766060&method=token.create&v=2&sign=e8e4f9cbedeec50b50cd0588cd53e69a&timestamp=1658235437371&access_token=
+2022-07-19 20:57:18.154 [main] INFO  com.jinritemai.cloud.base.core.service.TokenServiceImpl  - responseEntity === {"body":"{\"code\":40003,\"err_no\":4,\"log_id\":\"2022071920571701017425518103480CB2\",\"message\":\"【err_no、message字段已废弃，请阅读公告尽快改造：https://zjsms.com/2BwQmcT/】认证失败, 确保app_key, method, param_json, timestamp, v, sign等参数不为空\",\"msg\":\"非法的参数\",\"sub_code\":\"isv.parameter-invalid\",\"sub_msg\":\"认证失败, 确保app_key, method, param_json, timestamp, v, sign等参数不为空\"}","headers":{"Server":["nginx"],"Content-Type":["application/json; charset=utf-8"],"x-tt-trace-tag":["id=00;cdn-cache=miss"],"server-timing":["inner; dur=512"],"Connection":["keep-alive"],"X-Tt-Logid":["2022071920571701017425518103480CB2"],"Date":["Tue, 19 Jul 2022 12:57:18 GMT"],"x-tt-trace-host":["01bf29487831cc0ad5a573b707d85ace467067aad94298aa40255f94cfc952b59754b095532596ec397ff7409fb8f80b40b62283842ef589b4918581f9303edafa2e5525a6cd15591ee0345f66eda3cd32"],"Vary":["Accept-Encoding"],"Content-Length":["422"]},"statusCode":"OK","statusCodeValue":200}
+2022-07-19 20:57:18.155 [main] ERROR demo.biz.PrintService  - Failed to getToken!
+java.lang.NullPointerException: null
+	at java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at com.jinritemai.cloud.base.core.service.TokenServiceImpl.getToken(TokenServiceImpl.java:45)
+	at demo.biz.PrintService.testTokenService(PrintService.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1737)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:576)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at demo.deploy.DemoApplication.main(DemoApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51)
+2022-07-19 20:57:18.159 [main] INFO  com.jinritemai.cloud.base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-19 20:57:18.299 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-19 20:57:18.497 [main] INFO  com.jinritemai.cloud.base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-19 20:57:18.519 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-19 20:57:18.521 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 3.046 seconds (JVM running for 3.469)

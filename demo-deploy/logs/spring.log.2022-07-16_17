@@ -1,0 +1,338 @@
+2022-07-16 17:00:11.411 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:00:24.759 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 22731 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-16 17:00:24.762 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-16 17:00:26.075 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-16 17:00:26.098 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-16 17:00:26.098 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-16 17:00:26.112 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-16 17:00:26.195 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-16 17:00:26.195 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1388 ms
+2022-07-16 17:00:26.218 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-16 17:00:26.221 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-16 17:00:26.221 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-16 17:00:26.221 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-16 17:00:26.221 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-16 17:00:26.560 [main] INFO  demo.biz.PrintService  - token value :: token-777
+2022-07-16 17:00:26.564 [main] INFO  base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-16 17:00:26.791 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:00:27.224 [main] INFO  base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-16 17:00:27.293 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-16 17:00:27.298 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.902 seconds (JVM running for 3.34)
+2022-07-16 17:00:52.525 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 17:00:52.525 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-16 17:00:52.532 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 7 ms
+2022-07-16 17:00:52.630 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf","method":"GetItem"}
+2022-07-16 17:00:52.646 [http-nio-8080-exec-2] ERROR base.core.service.SpiService  - Failed to call ExtensionServiceHandler!
+com.alibaba.fastjson.JSONException: error parse false
+	at com.alibaba.fastjson.parser.JSONLexerBase.scanFalse(JSONLexerBase.java:4754)
+	at com.alibaba.fastjson.parser.JSONLexerBase.nextToken(JSONLexerBase.java:151)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.<init>(DefaultJSONParser.java:170)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.<init>(DefaultJSONParser.java:141)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:378)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:362)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:325)
+	at base.core.util.SpiDTOConvertUtil.convert(SpiDTOConvertUtil.java:25)
+	at base.core.service.SpiService.handle(SpiService.java:51)
+	at base.core.controller.CloudBaseController.handleSpi(CloudBaseController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-16 17:04:47.635 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:05:18.760 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 22869 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-16 17:05:18.762 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-16 17:05:19.700 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-16 17:05:19.716 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-16 17:05:19.717 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-16 17:05:19.726 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-16 17:05:19.810 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-16 17:05:19.811 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1018 ms
+2022-07-16 17:05:19.838 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-16 17:05:19.843 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-16 17:05:19.843 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-16 17:05:19.844 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-16 17:05:19.844 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-16 17:05:20.121 [main] INFO  demo.biz.PrintService  - token value :: token-777
+2022-07-16 17:05:20.125 [main] INFO  base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-16 17:05:20.275 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:05:20.604 [main] INFO  base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.String"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-16 17:05:20.630 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-16 17:05:20.635 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.116 seconds (JVM running for 2.536)
+2022-07-16 17:05:25.072 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 17:05:25.073 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-16 17:05:25.080 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 7 ms
+2022-07-16 17:05:25.171 [http-nio-8080-exec-1] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf","method":"GetItem"}
+2022-07-16 17:05:25.172 [http-nio-8080-exec-1] INFO  demo.biz.GetItemService  - GetItemService fadsf
+2022-07-16 17:05:25.175 [http-nio-8080-exec-1] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:05:33.218 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf-data","method":"GetItem"}
+2022-07-16 17:05:33.218 [http-nio-8080-exec-3] INFO  demo.biz.GetItemService  - GetItemService fadsf-data
+2022-07-16 17:05:33.219 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:05:47.220 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:05:59.722 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 22913 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-16 17:05:59.724 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-16 17:06:00.952 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-16 17:06:00.984 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-16 17:06:00.984 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-16 17:06:00.999 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-16 17:06:01.088 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-16 17:06:01.089 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1308 ms
+2022-07-16 17:06:01.118 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-16 17:06:01.122 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-16 17:06:01.122 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-16 17:06:01.123 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-16 17:06:01.123 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-16 17:06:01.452 [main] INFO  demo.biz.PrintService  - token value :: token-777
+2022-07-16 17:06:01.460 [main] INFO  base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-16 17:06:01.675 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:06:02.178 [main] INFO  base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.String"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-16 17:06:02.219 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-16 17:06:02.224 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.826 seconds (JVM running for 3.286)
+2022-07-16 17:06:04.553 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 17:06:04.553 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-16 17:06:04.559 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 6 ms
+2022-07-16 17:06:04.650 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf-data","method":"GetItem"}
+2022-07-16 17:06:04.651 [http-nio-8080-exec-2] INFO  demo.biz.GetItemService  - GetItemService fadsf-data
+2022-07-16 17:06:04.655 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:06:08.399 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf-data","method":"GetItem"}
+2022-07-16 17:06:08.400 [http-nio-8080-exec-3] INFO  demo.biz.GetItemService  - GetItemService fadsf-data
+2022-07-16 17:06:08.400 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:06:20.535 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:06:38.993 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 22963 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-16 17:06:38.996 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-16 17:06:40.279 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-16 17:06:40.305 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-16 17:06:40.305 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-16 17:06:40.319 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-16 17:06:40.410 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-16 17:06:40.410 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1354 ms
+2022-07-16 17:06:40.434 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-16 17:06:40.438 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-16 17:06:40.438 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-16 17:06:40.438 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-16 17:06:40.438 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-16 17:06:40.824 [main] INFO  demo.biz.PrintService  - token value :: token-777
+2022-07-16 17:06:40.832 [main] INFO  base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-16 17:06:41.058 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:06:41.367 [main] INFO  base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-16 17:06:41.394 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-16 17:06:41.397 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.686 seconds (JVM running for 3.107)
+2022-07-16 17:06:45.130 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 17:06:45.130 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-16 17:06:45.143 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 12 ms
+2022-07-16 17:06:45.258 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"fadsf-data","method":"GetItem"}
+2022-07-16 17:06:45.274 [http-nio-8080-exec-2] ERROR base.core.service.SpiService  - Failed to call ExtensionServiceHandler!
+com.alibaba.fastjson.JSONException: error parse false
+	at com.alibaba.fastjson.parser.JSONLexerBase.scanFalse(JSONLexerBase.java:4754)
+	at com.alibaba.fastjson.parser.JSONLexerBase.nextToken(JSONLexerBase.java:151)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.<init>(DefaultJSONParser.java:170)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.<init>(DefaultJSONParser.java:141)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:378)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:362)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:325)
+	at base.core.util.SpiDTOConvertUtil.convert(SpiDTOConvertUtil.java:30)
+	at base.core.service.SpiService.handle(SpiService.java:51)
+	at base.core.controller.CloudBaseController.handleSpi(CloudBaseController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2022-07-16 17:06:56.594 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"123","method":"GetItem"}
+2022-07-16 17:06:56.595 [http-nio-8080-exec-3] INFO  demo.biz.GetItemService  - GetItemService -23 123
+2022-07-16 17:06:56.599 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:12:35.965 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:13:25.566 [main] INFO  demo.deploy.DemoApplication  - Starting DemoApplication v1.0.0-SNAPSHOT on C02FW0ZEMD6V with PID 23083 (/Users/bytedance/work/bd-demo/demo/demo-deploy/target/demo-deploy-1.0.0-SNAPSHOT.jar started by bytedance in /Users/bytedance/work/bd-demo/demo/demo-deploy)
+2022-07-16 17:13:25.568 [main] INFO  demo.deploy.DemoApplication  - The following profiles are active: dev
+2022-07-16 17:13:26.851 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat initialized with port(s): 8080 (http)
+2022-07-16 17:13:26.874 [main] INFO  org.apache.catalina.core.StandardService  - Starting service [Tomcat]
+2022-07-16 17:13:26.874 [main] INFO  org.apache.catalina.core.StandardEngine  - Starting Servlet Engine: Apache Tomcat/9.0.12
+2022-07-16 17:13:26.902 [main] INFO  org.apache.catalina.core.AprLifecycleListener  - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bytedance/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-07-16 17:13:27.005 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring embedded WebApplicationContext
+2022-07-16 17:13:27.006 [main] INFO  org.springframework.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 1407 ms
+2022-07-16 17:13:27.029 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean  - Servlet dispatcherServlet mapped to [/]
+2022-07-16 17:13:27.033 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-07-16 17:13:27.033 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-07-16 17:13:27.033 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'formContentFilter' to: [/*]
+2022-07-16 17:13:27.033 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean  - Mapping filter: 'requestContextFilter' to: [/*]
+2022-07-16 17:13:27.527 [main] INFO  demo.biz.PrintService  - token value :: token-777
+2022-07-16 17:13:27.536 [main] INFO  base.core.BaseTestService  - testBaseTestService value : 777777
+2022-07-16 17:13:27.780 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-16 17:13:28.212 [main] INFO  base.core.service.SpiService  - #loadExtensionService success! content: {"GetItem":{"bean":{},"inParamType":"java.lang.Integer"},"saveItem":{"bean":{},"inParamType":"demo.api.ItemDTO"}}
+2022-07-16 17:13:28.238 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-16 17:13:28.241 [main] INFO  demo.deploy.DemoApplication  - Started DemoApplication in 2.992 seconds (JVM running for 3.419)
+2022-07-16 17:13:31.273 [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-16 17:13:31.273 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Initializing Servlet 'dispatcherServlet'
+2022-07-16 17:13:31.283 [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet  - Completed initialization in 10 ms
+2022-07-16 17:13:31.423 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"12345","method":"GetItem"}
+2022-07-16 17:13:31.438 [http-nio-8080-exec-2] INFO  demo.biz.GetItemService  - GetItemService -23 12345
+2022-07-16 17:13:31.441 [http-nio-8080-exec-2] INFO  base.core.service.SpiService  - Spi handler response : {}
+2022-07-16 17:13:34.676 [http-nio-8080-exec-3] INFO  base.core.service.SpiService  - Spi handler receive request : {"appId":"dfadf","authId":"shop123","data":"asdfafe","method":"GetItem"}
+2022-07-16 17:13:34.679 [http-nio-8080-exec-3] ERROR base.core.service.SpiService  - Parameter mismatch! Please check the actual data type and the defined type!
+com.alibaba.fastjson.JSONException: parseInt error
+	at com.alibaba.fastjson.serializer.IntegerCodec.deserialze(IntegerCodec.java:101)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseObject(DefaultJSONParser.java:705)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:394)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:362)
+	at com.alibaba.fastjson.JSON.parseObject(JSON.java:325)
+	at base.core.util.SpiDTOConvertUtil.convert(SpiDTOConvertUtil.java:33)
+	at base.core.service.SpiService.handle(SpiService.java:52)
+	at base.core.controller.CloudBaseController.handleSpi(CloudBaseController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: com.alibaba.fastjson.JSONException: syntax error, pos 1, line 1, column 2asdfafe
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1510)
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parse(DefaultJSONParser.java:1390)
+	at com.alibaba.fastjson.serializer.IntegerCodec.deserialze(IntegerCodec.java:92)
+	... 61 common frames omitted
+2022-07-16 17:14:15.129 [Thread-7] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor  - Shutting down ExecutorService 'applicationTaskExecutor'
