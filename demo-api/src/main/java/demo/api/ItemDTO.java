@@ -8,6 +8,7 @@ import lombok.Data;
  */
 @Data
 public class ItemDTO {
+    private String cmd;
     private String title;
-    private Integer price;
+
 }
